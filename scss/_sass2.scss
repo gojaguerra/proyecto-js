@@ -1,0 +1,34 @@
+
+// MAPS
+$fuentesEstilo:(color: $color-text-cabecera,fuente: $font-family-cabecera,tamanio: $font-size-cabecera);
+
+// EXTEND
+.tituloH1 {
+    text-align: center;
+    font-family: map-get($fuentesEstilo,fuente);
+    font-size: map-get($fuentesEstilo,tamanio);
+    padding: 2px;
+}
+
+.tituloH2 {
+
+    @extend .tituloH1;
+
+    padding: 5px;
+    border: 1px;
+}
+
+.TituloH3 {
+
+    @extend .tituloH1;
+    text-align: left;
+    padding: 3px;
+
+}
+
+// MIXING
+
+@mixin footerDisplay {
+    display: flex;
+    justify-content: center;
+}
