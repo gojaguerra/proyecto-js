@@ -72,42 +72,200 @@
   </header>
 
   <main>
+    
     <div class="imagenFondoProductos">
       <section class="seccionesCabecera">
         <h1>Nuestros Productos</h1>
       </section>
     </div>
 
-    <section id="idCocinas">
+      <h3 class="h3Productos">Ventas</h3>
+ 
 
-      <h3 class="h3Productos">Cocinas</h3>
-      <div class="row">
 
-        <div class="col-lg-3 col-md-2 col-sm-1"></div>
-        <div id="carouselCocina" class="carousel slide col-lg-6 col-md-8 col-sm-10" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000">
-              <img src="../img/cocina01.jpg" class="d-block w-100" alt="Foto Cocina #1">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="../img/cocina02.jpg" class="d-block w-100" alt="Foto Cocina #2">
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="../img/cocina03.jpg" class="d-block w-100" alt="Foto Cocina #3">
-            </div>
+
+      <!-- Se genera distintas anclas para cada sección de productos -->
+      <!-- Cajas Bootstrap para tienda-->
+      <section class="secAnillos">
+          <h1 class="titulos" id="Anillos">Anillos</h1>
+          <nav class="texto">
+              Todos los anillos que queres están aquí y el anillo que soñas... también lo hacemos, consultanos y lo
+              hacemos realidad.
+          </nav>
+
+          <div class="cajaProductos">
+              <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+                  <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+                      <div class="col">
+                          <div class="card h-100 shadow-sm">
+                              <img class="card-img-top" src="../img/carrito01.jpeg" alt="Anillo_PlataOro">
+                              <div class="card-body">
+                                  <div class="clearfix mb-3">
+                                      <span class="float-start badge rounded-pill bg-primary">Oferta!</span>
+                                      <span class="float-end badge rounded-pill bg-success">$ 999.-</span>
+                                  </div>
+                                  <h5 class="card-title">Anillo circular Diamante</h5>
+
+                                  <div class="text-center my-4">
+                                      <!-- Botón Modal Carrito -->
+                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop">
+                                          Agregar al Carrito
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <p>Anillo de plata y diamantes, compralo hasta en 12 cuotas.</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary"
+                                          data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-warning"
+                                          data-bs-dismiss="modal">Confirmar</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100 shadow-sm">
+                              <img class="card-img-top" src="../img/carrito02.jpeg" alt="Anillo_curvo">
+                              <div class="card-body">
+                                  <div class="clearfix mb-3">
+                                      <span class="float-end badge rounded-pill bg-success">$ 2.499.-</span>
+                                  </div>
+                                  <h5 class="card-title">Anillo Mariposas</h5>
+                                  <div class="text-center my-4">
+                                      <!-- Botón Modal Carrito -->
+                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop2">
+                                          Agregar al Carrito
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <p>Anillo de mariposas y detalles en color violeta, compralo hasta en 12 cuotas.
+                                      </p>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary"
+                                          data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-warning"
+                                          data-bs-dismiss="modal">Confirmar</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100 shadow-sm">
+                              <img class="card-img-top" src="../img/carrito03.jpeg" alt="Anillo_especial">
+                              <div class="label-top shadow-sm">Bronce</div>
+                              <div class="card-body">
+                                  <div class="clearfix mb-3">
+                                      <span class="float-end badge rounded-pill bg-success">$ 1.499.-</span>
+                                  </div>
+                                  <h5 class="card-title">Anillo Bronce</h5>
+                                  <div class="text-center my-4">
+                                      <!-- Botón Modal Carrito -->
+                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop3">
+                                          Agregar al Carrito
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
+                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                          aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <p>Anillo de Bronce, compralo hasta en 12 cuotas.</p>
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary"
+                                          data-bs-dismiss="modal">Cancelar</button>
+                                      <button type="button" class="btn btn-warning"
+                                          data-bs-dismiss="modal">Confirmar</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                          <div class="card h-100 shadow-sm">
+                              <img class="card-img-top" src="../img/carrito04.jpeg" alt="Anillo_corazones">
+                              <div class="label-top shadow-sm">Oportunidad</div>
+                              <div class="card-body">
+                                  <div class="clearfix mb-3">
+                                      <span class="float-end badge rounded-pill bg-success">$ 1.999.-</span>
+                                  </div>
+                                  <h5 class="card-title">Anillo Corazones</h5>
+                                  <div class="text-center my-4">
+                                      <!-- Botón Modal Carrito -->
+                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                          data-bs-target="#staticBackdrop4">
+                                          Agregar al Carrito
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+                      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                      aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  <p>Anillo de corazones, especial para enamorados, compralo hasta en 12 cuotas.</p>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary"
+                                      data-bs-dismiss="modal">Cancelar</button>
+                                  <button type="button" class="btn btn-warning"
+                                      data-bs-dismiss="modal">Confirmar</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCocina" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselCocina" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-        <div class="col-lg-3 col-md-2 col-sm-1"></div>
-      </div>
-    </section>
+      </section>
+
 
    </main>
 

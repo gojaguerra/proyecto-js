@@ -369,6 +369,12 @@ p,
 footer {
   grid-area: footer; }
 
+.cajaProductos {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around; }
+
 /* 
       MEDIA QUERIES
  */
