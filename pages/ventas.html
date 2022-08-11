@@ -64,14 +64,18 @@
             <li class="nav-item">
               <a class="nav-link" href="quienes-somos.html">Quienes Somos</a>
             </li>
-
+            <li class="nav-item ">
+                <button type="button" id="open" class="btn btn-primary" data-bs-toggle="modal"
+                  data-bs-target="#modal-Carrito">Carrito <i class="fa-solid fa-cart-shopping"></i> <span
+                    id="contador-carrito">0</span> </a>
+              </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="producto-contenedor">
     
     <div class="imagenFondoProductos">
       <section class="seccionesCabecera">
@@ -81,192 +85,111 @@
 
       <h3 class="h3Productos">Ventas</h3>
  
-
-
-
-      <!-- Se genera distintas anclas para cada sección de productos -->
-      <!-- Cajas Bootstrap para tienda-->
-      <section class="secAnillos">
-          <h1 class="titulos" id="Anillos">Anillos</h1>
-          <nav class="texto">
-              Todos los anillos que queres están aquí y el anillo que soñas... también lo hacemos, consultanos y lo
-              hacemos realidad.
-          </nav>
-
-          <div class="cajaProductos">
-              <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-                  <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-                      <div class="col">
-                          <div class="card h-100 shadow-sm">
-                              <img class="card-img-top" src="../img/carrito01.jpeg" alt="Anillo_PlataOro">
-                              <div class="card-body">
-                                  <div class="clearfix mb-3">
-                                      <span class="float-start badge rounded-pill bg-primary">Oferta!</span>
-                                      <span class="float-end badge rounded-pill bg-success">$ 999.-</span>
-                                  </div>
-                                  <h5 class="card-title">Anillo circular Diamante</h5>
-
-                                  <div class="text-center my-4">
-                                      <!-- Botón Modal Carrito -->
-                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                          data-bs-target="#staticBackdrop">
-                                          Agregar al Carrito
-                                      </button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Modal -->
-                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                          aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                      <p>Anillo de plata y diamantes, compralo hasta en 12 cuotas.</p>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary"
-                                          data-bs-dismiss="modal">Cancelar</button>
-                                      <button type="button" class="btn btn-warning"
-                                          data-bs-dismiss="modal">Confirmar</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                          <div class="card h-100 shadow-sm">
-                              <img class="card-img-top" src="../img/carrito02.jpeg" alt="Anillo_curvo">
-                              <div class="card-body">
-                                  <div class="clearfix mb-3">
-                                      <span class="float-end badge rounded-pill bg-success">$ 2.499.-</span>
-                                  </div>
-                                  <h5 class="card-title">Anillo Mariposas</h5>
-                                  <div class="text-center my-4">
-                                      <!-- Botón Modal Carrito -->
-                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                          data-bs-target="#staticBackdrop2">
-                                          Agregar al Carrito
-                                      </button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Modal -->
-                      <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
-                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                          aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                      <p>Anillo de mariposas y detalles en color violeta, compralo hasta en 12 cuotas.
-                                      </p>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary"
-                                          data-bs-dismiss="modal">Cancelar</button>
-                                      <button type="button" class="btn btn-warning"
-                                          data-bs-dismiss="modal">Confirmar</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                          <div class="card h-100 shadow-sm">
-                              <img class="card-img-top" src="../img/carrito03.jpeg" alt="Anillo_especial">
-                              <div class="label-top shadow-sm">Bronce</div>
-                              <div class="card-body">
-                                  <div class="clearfix mb-3">
-                                      <span class="float-end badge rounded-pill bg-success">$ 1.499.-</span>
-                                  </div>
-                                  <h5 class="card-title">Anillo Bronce</h5>
-                                  <div class="text-center my-4">
-                                      <!-- Botón Modal Carrito -->
-                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                          data-bs-target="#staticBackdrop3">
-                                          Agregar al Carrito
-                                      </button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Modal -->
-                      <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false"
-                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                              <div class="modal-content">
-                                  <div class="modal-header">
-                                      <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                          aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                      <p>Anillo de Bronce, compralo hasta en 12 cuotas.</p>
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary"
-                                          data-bs-dismiss="modal">Cancelar</button>
-                                      <button type="button" class="btn btn-warning"
-                                          data-bs-dismiss="modal">Confirmar</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                          <div class="card h-100 shadow-sm">
-                              <img class="card-img-top" src="../img/carrito04.jpeg" alt="Anillo_corazones">
-                              <div class="label-top shadow-sm">Oportunidad</div>
-                              <div class="card-body">
-                                  <div class="clearfix mb-3">
-                                      <span class="float-end badge rounded-pill bg-success">$ 1.999.-</span>
-                                  </div>
-                                  <h5 class="card-title">Anillo Corazones</h5>
-                                  <div class="text-center my-4">
-                                      <!-- Botón Modal Carrito -->
-                                      <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                          data-bs-target="#staticBackdrop4">
-                                          Agregar al Carrito
-                                      </button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
-                      tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title" id="staticBackdropLabel">Muy buena elección!</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                      aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  <p>Anillo de corazones, especial para enamorados, compralo hasta en 12 cuotas.</p>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary"
-                                      data-bs-dismiss="modal">Cancelar</button>
-                                  <button type="button" class="btn btn-warning"
-                                      data-bs-dismiss="modal">Confirmar</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+          <!-- 
+            MODAL PARA MOSTRAR EL CARRITO
+         -->
+    <div class="modal fade" id="modal-Carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel">Carrito en preparación</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+  
+              <h3>Detalle</h3>
+  
+              <br>
+              <h4 id=elTotal>Total: $ 0.00</h4>
+              <div id="carrito-contenedor"></div>
+  
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cerrar" class="btn btn-secondary" data-bs-dismiss="modal">
+                Cerrar
+              </button>
+              <button type="button" id="finalizar" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#modalFinalizar">
+                Finalizar
+              </button>
+            </div>
           </div>
-      </section>
-
-
+        </div>
+      </div>
+  
+  
+      <!-- 
+              MODAL PARA MOSTRAR LA FINALIZACION DEL PEDIDO
+           -->
+      <div class="modal fade bd-example-modal-lg" id="modalFinalizar" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+  
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Confirmar Pedido</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+  
+            <div id="modalFinal" class="modal-body"></div>
+  
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="form-group col-md-6">
+                  <label for="customer-name" class="col-form-label">Nombre y Apellido:</label>
+                  <input type="text" class="form-control" id="customer-name" placeholder="ingrese su Nombre y Apellido"
+                    required>
+                  <div class="valid-feedback">Ok Valido!</div>
+                  <div class="invalid-feedback">Complete el campo!</div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="recipient-name" class="col-form-label">Email:</label>
+                  <input type="email" class="form-control" id="recipient-name" placeholder="email@ejemplo.com" required>
+                  <div class="valid-feedback">Ok Valido!</div>
+                  <div class="invalid-feedback">Complete el campo!</div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="customer-address" class="col-form-label">Domicilio:</label>
+                  <input type="text" class="form-control" id="customer-address" placeholder="ingrese su Domicilio" required>
+                  <div class="valid-feedback">Ok Valido!</div>
+                  <div class="invalid-feedback">Complete el campo!</div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="customer-city" class="col-form-label">Ciudad:</label>
+                  <input type="text" class="form-control" id="customer-city" placeholder="ingrese su Ciudad" required>
+                  <div class="valid-feedback">Ok Valido!</div>
+                  <div class="invalid-feedback">Complete el campo!</div>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="customer-phone" class="col-form-label">Número de Móvil:</label>
+                  <input type="text" class="form-control" id="customer-phone" placeholder="ingrese su Número de Móvil" required>
+                  <div class="valid-feedback">Ok Valido!</div>
+                  <div class="invalid-feedback">Complete el campo!</div>
+                </div>
+                <div class="form-group col-md-12">
+                  <label for="message-text" class="col-form-label">Mensaje:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+  
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#modal-Carrito">Cancelar</button>
+                  <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
+                  <!-- <button type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button> -->
+                </div>
+  
+              </form>
+            </div>
+  
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                data-bs-target="#modal-Carrito">Cancelar</button>
+              <button type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+ 
    </main>
 
   <footer class="footerStyle">
