@@ -5,6 +5,6 @@
     {"id":4, "nombre":"Tablas para Picada", "desc":"Madera de eucalipto. Incluye cera para mantenimiento.", "precio":3000, "img":"../img/carrito04.jpeg", "cantidad":10},
     {"id":5, "nombre":"Perchero de Pared", "desc":"Madera de eucalipto laqueada con perchas aluminio mate.", "precio":5000, "img":"../img/carrito05.jpeg", "cantidad":10},
     {"id":6, "nombre":"Lampara Hexagonal", "desc":"Lampara de mesa, madera de eucalipto, con foco vintage.", "precio":7000, "img":"../img/carrito06.jpeg", "cantidad":10},
-    {"id":7, "nombre":"Perchero de Pared", "desc":"Lampara de mesa, madera de eucalipto, con foco vintage.", "precio":5000, "img":"../img/carrito07.jpeg", "cantidad":10},
-    {"id":8, "nombre":"Marco Colgante", "desc":"Lampara de mesa, madera de eucalipto, con foco vintage.", "precio":4500, "img":"../img/carrito08.jpeg", "cantidad":10}
+    {"id":7, "nombre":"Perchero gancho Hamaca", "desc":"Madera de eucalipto laqueada con perchas de hamaca Paraguaya.", "precio":5000, "img":"../img/carrito07.jpeg", "cantidad":10},
+    {"id":8, "nombre":"Cuadro para Fotos", "desc":"Marco en madera de Kiri. Incluye diez broches para colgar fotosgit.", "precio":4500, "img":"../img/carrito08.jpeg", "cantidad":10}
 ]
