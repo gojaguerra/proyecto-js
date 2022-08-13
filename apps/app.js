@@ -8,9 +8,9 @@ import {
 // ARMA LAS CARDS DE LOS PRODUCTOS
 const mostrarProductos = (productos) => {
     const contenedorProductos = document.getElementById('producto-contenedor');
-    
+
     productos.forEach(producto => {
-        
+
         const div = document.createElement('div')
         div.classList.add('card')
         div.innerHTML += `<div class="card" style="width: 18rem;">
@@ -44,7 +44,9 @@ const mostrarProductos = (productos) => {
 
 }
 
-export { mostrarProductos };
+export {
+    mostrarProductos
+};
 
 export function verificoStorage() {
 
@@ -69,19 +71,19 @@ export function verificoStorage() {
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
     'use strict'
-  
+
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
-    
+
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-         }
-  
-        form.classList.add('was-validated')
-      }, false)
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+        }, false)
     })
-  })()
+})()

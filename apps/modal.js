@@ -10,6 +10,7 @@ const modalCarrito = document.querySelector('.modal-carrito')
 const abrirCarrito = document.getElementById('open')
  */
 
+const vaciarCarrito = document.getElementById('vaciar')
 const cerrarCarrito = document.getElementById('cerrar')
 const finalizarCarrito = document.getElementById('finalizar')
 const enviarCarrito = document.getElementById('enviar')
@@ -26,28 +27,27 @@ myModalDos.addEventListener('shown.bs.modal', () => {
     myInputCustomerName.focus()
 })
 
-// CLICK PARA ABRIR EL CARRITO - EN EL HEADER
-/* abrirCarrito.addEventListener('click', () => {
-    modalContenedor.classList.toggle('modal-active')
-}) */
+vaciarCarrito.addEventListener('click', () => {
 
-/* // CLICK BOTON CERRAR EN EL CARRITO - EN EL MODAL
-cerrarCarrito.addEventListener('click', () => {
-    modalContenedor.classList.remove('modal-active')
+    // borra el storage
+    localStorage.clear();
+    // borra el array de pedidos
+    carritoVaciar();
+    // acomoda contadores del carrito header
+    verificoStorage();
+
+    // limpia modal del pedido
+    const contenedorCarrito = document.getElementById("carrito-contenedor")
+
+    if (contenedorCarrito) {
+        contenedorCarrito.innerHTML = "";
+    }
+
+    let totalPedido = document.getElementById("elTotal");
+    let precioPedido = 0;
+    totalPedido.innerHTML = `Total: $${precioPedido}`;
+
 })
-
-// CLICK FUERA DEL MODAL PARA CERRAR MODAL
-modalContenedor.addEventListener('click', () => {
-    cerrarCarrito.click();
-}) */
-
-/* modalCarrito.addEventListener('click', (e) => {
-    e.stopPropagation();
-}) */
-
-/* cerrarCarrito.addEventListener('click', () => {
-    modalContenedor.classList.remove('modal-active')
-}) */
 
 // muestro el pedido antes de mandarlo
 finalizarCarrito.addEventListener('click', () => {
@@ -105,19 +105,6 @@ enviar.addEventListener('click', (e) => {
 
     // ACA hay que verificar los datos si estan completos
     if (myInputCustomerName.value === "") {
-       /*  Swal.fire({
-           icon: 'error',
-           title: 'Oops...',
-           text: 'Complete el campo Nombre!',
-           timer: 2000
-         }) */
-
-       // var modal = bootstrap.Modal.getInstance(myModalUno)
-       // modal.toggle();
-
-        // finalizarCarrito.click();
-       // muestraUltimoModal()
-
         return false;
     }
 
@@ -148,7 +135,7 @@ enviar.addEventListener('click', (e) => {
     let fechaEntrega = dt.plus({
         days: 2
     }).toLocaleString()
-    
+
     // cierro manualmente el MODAL ya que utilice el preventDefault mas arriba
     var modalDos = bootstrap.Modal.getInstance(myModalDos)
     modalDos.hide();

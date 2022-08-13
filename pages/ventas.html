@@ -65,10 +65,10 @@
               <a class="nav-link" href="quienes-somos.html">Quienes Somos</a>
             </li>
             <li class="nav-item ">
-                <button type="button" id="open" class="btn btn-primary" data-bs-toggle="modal"
-                  data-bs-target="#modal-Carrito">Carrito <i class="fa-solid fa-cart-shopping"></i> <span
-                    id="contador-carrito">0</span> </a>
-              </li>
+              <button type="button" id="open" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#modal-Carrito">Carrito <i class="fa-solid fa-cart-shopping"></i> <span
+                  id="contador-carrito">0</span> </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -76,20 +76,20 @@
   </header>
 
   <main>
-    
+
     <div class="imagenFondoProductos">
       <section class="seccionesCabecera">
         <h1>Nuestros Productos</h1>
       </section>
     </div>
 
-      <h3 class="h3Productos">Ventas</h3>
- 
-      <div id="producto-contenedor">
-          <!-- 
+    <h3 class="h3Productos">Ventas</h3>
+
+    <div id="producto-contenedor">
+      <!-- 
             MODAL PARA MOSTRAR EL CARRITO
          -->
-    <div class="modal fade" id="modal-Carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modal-Carrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -97,15 +97,18 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-  
+
               <h3>Detalle</h3>
-  
+
               <br>
               <h4 id=elTotal>Total: $ 0.00</h4>
               <div id="carrito-contenedor"></div>
-  
+
             </div>
             <div class="modal-footer">
+              <button type="button" id="vaciar" class="btn btn-secondary" data-bs-dismiss="modal">
+                Vaciar
+              </button>
               <button type="button" id="cerrar" class="btn btn-secondary" data-bs-dismiss="modal">
                 Cerrar
               </button>
@@ -117,23 +120,23 @@
           </div>
         </div>
       </div>
-  
-  
+
+
       <!-- 
               MODAL PARA MOSTRAR LA FINALIZACION DEL PEDIDO
            -->
       <div class="modal fade bd-example-modal-lg" id="modalFinalizar" tabindex="-1" role="dialog"
         aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-  
+
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Confirmar Pedido</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-  
+
             <div id="modalFinal" class="modal-body"></div>
-  
+
             <div class="modal-body">
               <form class="row g-3 needs-validation" novalidate>
                 <div class="form-group col-md-6">
@@ -151,7 +154,8 @@
                 </div>
                 <div class="form-group col-md-4">
                   <label for="customer-address" class="col-form-label">Domicilio:</label>
-                  <input type="text" class="form-control" id="customer-address" placeholder="ingrese su Domicilio" required>
+                  <input type="text" class="form-control" id="customer-address" placeholder="ingrese su Domicilio"
+                    required>
                   <div class="valid-feedback">Ok Valido!</div>
                   <div class="invalid-feedback">Complete el campo!</div>
                 </div>
@@ -163,7 +167,8 @@
                 </div>
                 <div class="form-group col-md-4">
                   <label for="customer-phone" class="col-form-label">Número de Móvil:</label>
-                  <input type="text" class="form-control" id="customer-phone" placeholder="ingrese su Número de Móvil" required>
+                  <input type="text" class="form-control" id="customer-phone" placeholder="ingrese su Número de Móvil"
+                    required>
                   <div class="valid-feedback">Ok Valido!</div>
                   <div class="invalid-feedback">Complete el campo!</div>
                 </div>
@@ -171,17 +176,17 @@
                   <label for="message-text" class="col-form-label">Mensaje:</label>
                   <textarea class="form-control" id="message-text"></textarea>
                 </div>
-  
+
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                     data-bs-target="#modal-Carrito">Cancelar</button>
                   <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
                   <!-- <button type="submit" id="enviar" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button> -->
                 </div>
-  
+
               </form>
             </div>
-  
+
             <!-- <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                 data-bs-target="#modal-Carrito">Cancelar</button>
@@ -191,7 +196,7 @@
         </div>
       </div>
     </div>
-   </main>
+  </main>
 
   <footer class="footerStyle">
     <div class="footerCenter">
@@ -209,15 +214,15 @@
     </div>
   </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-</script>
-<script src="../apps/stock.js" type="module"></script>
-<script src="../apps/modal.js" type="module"></script>
-<script src="../apps/carritoIndex.js" type="module"></script>
-<script src="../apps/app.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+  </script>
+  <script src="../apps/stock.js" type="module"></script>
+  <script src="../apps/modal.js" type="module"></script>
+  <script src="../apps/carritoIndex.js" type="module"></script>
+  <script src="../apps/app.js" type="module"></script>
 
 </body>
 

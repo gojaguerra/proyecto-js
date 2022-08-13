@@ -29,9 +29,9 @@ const cargarProductos = async () => {
   try {
     const response = await fetch("../productos/data.json");
     const productosJson = await response.json();
-    
+
     productosJson.forEach((producto) => {
-      
+
       productos.push(
         new NewProductos(
           producto.id,
@@ -51,11 +51,13 @@ const cargarProductos = async () => {
     verificoStorage();
 
   } catch (error) {
-    console.log("error:"+error);
+    console.log("error:" + error);
   }
 };
 
 // OBTENGO LOS PRODUCTOS CON LA FUNCION
 cargarProductos();
 
-export { productos };
+export {
+  productos
+};
