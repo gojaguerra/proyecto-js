@@ -45,11 +45,20 @@ abrirCarrito.addEventListener('click', () => {
         finalizarCarrito.classList.add('btn-primary')
         finalizarCarrito.removeAttribute("disabled")
 
+        vaciarCarrito.classList.remove('btn-secondary')
+        vaciarCarrito.classList.add('btn-primary')
+        vaciarCarrito.removeAttribute("disabled")
+
     } else {
+        
         // PONGO EL BOTON COMO SECUNDARIO y DISABLED
         finalizarCarrito.classList.remove('btn-primary')
         finalizarCarrito.classList.add('btn-secondary')
         finalizarCarrito.setAttribute("disabled", "")
+
+        vaciarCarrito.classList.remove('btn-primary')
+        vaciarCarrito.classList.add('btn-secondary')
+        vaciarCarrito.setAttribute("disabled", "")
     }
 
 })
@@ -88,7 +97,7 @@ vaciarCarrito.addEventListener('click', () => {
             totalPedido.innerHTML = `Total: $${precioPedido}`;
  
             Swal.fire(
-                'Eliminado!',
+                'Carrito Eliminado!',
                 'Carrito vacio!',
                 'success'
             )
