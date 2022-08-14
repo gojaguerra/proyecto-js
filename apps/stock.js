@@ -5,6 +5,7 @@ import {
   mostrarProductos
 } from "./app.js";
 
+// IDENTIFICO EN QUE PAGINA ESTOY
 const myURLsplitted = location.href.split("/")
 const myPage=myURLsplitted.pop();
 

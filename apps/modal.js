@@ -5,15 +5,15 @@ import {
     carritoVaciar
 } from "./carritoIndex.js";
 
-
+// IDENTIFICO EN QUE PAGINA ESTOY
 const myURLsplitted = location.href.split("/")
-// console.log(myURLsplitted, "--->", myURLsplitted.pop());
 const myPage = myURLsplitted.pop();
 
 const vaciarCarrito = document.getElementById('vaciar')
 const cerrarCarrito = document.getElementById('cerrar')
 const finalizarCarrito = document.getElementById('finalizar')
 const enviarCarrito = document.getElementById('enviar')
+const abrirCarrito = document.getElementById('open')
 
 // Formulario modal para el envio del pedido
 const myModalUno = document.getElementById('modal-Carrito')
@@ -28,6 +28,30 @@ const myInputCustomerPhone = document.getElementById('customer-phone')
 // Posiciono el cursor en el campo nombre
 myModalDos.addEventListener('shown.bs.modal', () => {
     myInputCustomerName.focus()
+})
+
+abrirCarrito.addEventListener('click', () => {
+    // let contenedor = document.getElementById("modalFinal");
+    let productos = JSON.parse(localStorage.getItem("carritoFG"));
+    let cantidad;
+
+    // uso de OPERADORES AVANZADOS TERNARIOS y VERIFICO CANTIDAD DE ITEMS>0
+    productos ? cantidad = productos.reduce((acumulador, precio) => acumulador + (precio.cantidad), 0) : 0;
+
+    if (productos && cantidad > 0) {
+
+        // PONGO EL BOTON COMO PRIMARIO y ENABLED
+        finalizarCarrito.classList.remove('btn-secondary')
+        finalizarCarrito.classList.add('btn-primary')
+        finalizarCarrito.removeAttribute("disabled")
+
+    } else {
+        // PONGO EL BOTON COMO SECUNDARIO y DISABLED
+        finalizarCarrito.classList.remove('btn-primary')
+        finalizarCarrito.classList.add('btn-secondary')
+        finalizarCarrito.setAttribute("disabled", "")
+    }
+
 })
 
 // VACIAR TODO EL CARRITO
