@@ -20,12 +20,17 @@ const myModalUno = document.getElementById('modal-Carrito')
 
 const myModalDos = document.getElementById('modalFinalizar')
 const myInputCustomerName = document.getElementById('customer-name')
+const myInputRecipientName = document.getElementById('recipient-name')
+const myInputCustomerAddress = document.getElementById('customer-address')
+const myInputCustomerCity = document.getElementById('customer-city')
+const myInputCustomerPhone = document.getElementById('customer-phone')
 
 // Posiciono el cursor en el campo nombre
 myModalDos.addEventListener('shown.bs.modal', () => {
     myInputCustomerName.focus()
 })
 
+// VACIAR TODO EL CARRITO
 vaciarCarrito.addEventListener('click', () => {
 
     // SWEET ALERT
@@ -125,7 +130,7 @@ function muestraUltimoModal() {
 enviar.addEventListener('click', (e) => {
 
     // ACA hay que verificar los datos si estan completos
-    if (myInputCustomerName.value === "") {
+    if (myInputCustomerName.value === "" || myInputRecipientName.value === "" || myInputCustomerAddress.value === "" || myInputCustomerCity.value === "" || myInputCustomerPhone.value === "") {
         return false;
     }
 
@@ -160,6 +165,12 @@ enviar.addEventListener('click', (e) => {
     // cierro manualmente el MODAL ya que utilice el preventDefault mas arriba
     var modalDos = bootstrap.Modal.getInstance(myModalDos)
     modalDos.hide();
+
+    myInputCustomerName.value = "";
+    myInputRecipientName.value = "";
+    myInputCustomerAddress.value = "";
+    myInputCustomerCity.value = "";
+    myInputCustomerPhone.value = "";
 
     // SWEET ALERT
     Swal.fire({
