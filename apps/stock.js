@@ -5,6 +5,9 @@ import {
   mostrarProductos
 } from "./app.js";
 
+const myURLsplitted = location.href.split("/")
+const myPage=myURLsplitted.pop();
+
 // CLASE PARA DEFINIR LOS PRODUCTOS
 class NewProductos {
   constructor(id, nombre, desc, precio, img, cantidad) {
@@ -45,7 +48,9 @@ const cargarProductos = async () => {
     });
 
     // ARMO LAS CARDS PARA MOSTRAR LOS PRODUCTOS
-    mostrarProductos(productos);
+    if(myPage==="ventas.html"){
+      mostrarProductos(productos);
+    }
 
     // VERIFICO SI HABIA ALGO EN LOCALSTORAGE
     verificoStorage();

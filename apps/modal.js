@@ -5,10 +5,10 @@ import {
     carritoVaciar
 } from "./carritoIndex.js";
 
-/* const modalContenedor = document.querySelector('.modal-container');
-const modalCarrito = document.querySelector('.modal-carrito')
-const abrirCarrito = document.getElementById('open')
- */
+
+const myURLsplitted = location.href.split("/")
+// console.log(myURLsplitted, "--->", myURLsplitted.pop());
+const myPage = myURLsplitted.pop();
 
 const vaciarCarrito = document.getElementById('vaciar')
 const cerrarCarrito = document.getElementById('cerrar')
@@ -16,7 +16,6 @@ const finalizarCarrito = document.getElementById('finalizar')
 const enviarCarrito = document.getElementById('enviar')
 
 // Formulario modal para el envio del pedido
-
 const myModalUno = document.getElementById('modal-Carrito')
 
 const myModalDos = document.getElementById('modalFinalizar')
@@ -29,23 +28,45 @@ myModalDos.addEventListener('shown.bs.modal', () => {
 
 vaciarCarrito.addEventListener('click', () => {
 
-    // borra el storage
-    localStorage.clear();
-    // borra el array de pedidos
-    carritoVaciar();
-    // acomoda contadores del carrito header
-    verificoStorage();
+    // SWEET ALERT
+    Swal.fire({
+        title: '¿Estas seguro de vaciar el carrito?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, vaciar!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
 
-    // limpia modal del pedido
-    const contenedorCarrito = document.getElementById("carrito-contenedor")
+            // borra el storage
+            localStorage.clear();
+            // borra el array de pedidos
+            carritoVaciar();
+            // acomoda contadores del carrito header
+            verificoStorage();
+        
+            // limpia modal del pedido
+            const contenedorCarrito = document.getElementById("carrito-contenedor")
+        
+            if (contenedorCarrito) {
+                contenedorCarrito.innerHTML = "";
+            }
+        
+            let totalPedido = document.getElementById("elTotal");
+            let precioPedido = 0;
+            totalPedido.innerHTML = `Total: $${precioPedido}`;
+ 
+            Swal.fire(
+                'Eliminado!',
+                'Carrito vacio!',
+                'success'
+            )
+        }
+    })
 
-    if (contenedorCarrito) {
-        contenedorCarrito.innerHTML = "";
-    }
 
-    let totalPedido = document.getElementById("elTotal");
-    let precioPedido = 0;
-    totalPedido.innerHTML = `Total: $${precioPedido}`;
 
 })
 
