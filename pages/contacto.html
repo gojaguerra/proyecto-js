@@ -18,7 +18,7 @@
   <!-- FONTAWESOME -->
   <script src="https://kit.fontawesome.com/6ab0217e5f.js" crossorigin="anonymous"></script>
 
-  <link rel="shortcut icon" href="img/toolbox.png" type="image/png" />
+  <link rel="shortcut icon" href="../img/toolbox.png" type="image/png" />
 
   <!-- ANIMATE CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -129,7 +129,7 @@
           <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu mensaje</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <input class="btn btn-secondary" type="submit" value="Enviar">
+        <input class="btn btn-secondary" id="enviarMail" type="submit" value="Enviar">
         <input class="btn btn-secondary" type="reset" value="Borrar">
       </form>
     </nav>
@@ -257,6 +257,7 @@
     </div>
   </footer>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>  
   <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -266,6 +267,7 @@
   <script src="../apps/modal.js" type="module"></script>
   <script src="../apps/carritoIndex.js" type="module"></script>
   <script src="../apps/app.js" type="module"></script>
+  <script src="../apps/contacto.js"></script>
 
   <div class="botonWhatsApp">
     <a href="https://api.whatsapp.com/send?phone=+542235065737" target="_blank"><img src="../img/logoWhatsapp.png"
