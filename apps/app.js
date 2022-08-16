@@ -1,6 +1,3 @@
-/* import {
-    productos
-} from './stock.js' */
 import {
     carritoIndex
 } from './carritoIndex.js';
