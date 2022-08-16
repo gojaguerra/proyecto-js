@@ -8,6 +8,8 @@ const inputMensaje = document.getElementById('exampleFormControlTextarea1')
 
 enviarMail.addEventListener('click', (e) => {
 
+    e.preventDefault()
+
     if(inputNombre.value==="" || inputApellido.value==="" || inputEmail.value==="" || inputMensaje.value===""){
         Swal.fire({
             position: 'center',
@@ -19,16 +21,8 @@ enviarMail.addEventListener('click', (e) => {
         return false;
     }
 
-    e.preventDefault()
 
     emailjs.init("Il4613JHqDWAHcbwU");
-
-    /*     var templateParams = {
-            from_name: "better call Frangue",
-            to_name: "jguerra1968@gmail.com",
-            message: "HOLA ES UNA PRUEBA",
-            reply_to: "jguerra1968@gmail.com",
-        }; */
 
     var templateParams = {
         from_name: inputNombre.value + " " + inputApellido.value,
