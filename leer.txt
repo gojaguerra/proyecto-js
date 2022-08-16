@@ -1,0 +1,11 @@
+Estimado Andres
+
+Espero estes muy bien!!!
+
+He incorporado el carrito de ventas que hice durante el curso en el sitio web que venia desarrollando desde el curso anterior.
+1) La pagina en cuestion es la seccion de PRODUCTOS. Ahi encontraras todo lo visto en el curso implementado en el desarrollo del carrito.
+2) Tambien incorpore en la pagina de CONTACTO el uso del envio de email a traves de la plataforma emailJS. 
+Si lo probas y a modo de comprobar que anda te llegara un email confirmando que recibimos la solicitud de contacto.
+
+Espero haber cumplido con las consignas planteadas. 
+Te mando un gran saludo!!!

@@ -41,7 +41,7 @@ enviarMail.addEventListener('click', (e) => {
                 showConfirmButton: false,
                 timer: 1500
             })
-            // console.log('SUCCESS!', response.status, response.text);
+            
         }, function (error) {
             console.log('FAILED...', error);
         });
@@ -50,5 +50,7 @@ enviarMail.addEventListener('click', (e) => {
     inputApellido.value="";
     inputEmail.value="";
     inputMensaje.value="";
+
+    // location.reload();
 
 })
